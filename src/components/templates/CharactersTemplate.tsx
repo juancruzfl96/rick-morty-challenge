@@ -38,10 +38,10 @@ export const CharactersTemplate = ({
   onCharacter1Select,
   onCharacter2Select,
 }: CharactersTemplateProps) => (
-  <div className="grid grid-cols-2 gap-4 h-full">
-    <div className="overflow-y-auto border-r border-gray-600 p-2">
+  <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 h-full overflow-x-hidden">
+    <div className="h-full overflow-y-auto border-r border-gray-600 p-2">
       <CharacterRow
-        rowTitle={selectedCharacter1 ? selectedCharacter1.name : "Personaje 1"}
+        rowTitle={selectedCharacter1 ? selectedCharacter1.name : 'Personaje 1'}
         characters={charactersRow1}
         searchValue={search1}
         onSearchChange={onSearch1Change}
@@ -52,9 +52,9 @@ export const CharactersTemplate = ({
         onCharacterSelect={onCharacter1Select}
       />
     </div>
-    <div className="overflow-y-auto p-2">
+    <div className="h-full overflow-y-auto p-2">
       <CharacterRow
-        rowTitle={selectedCharacter2 ? selectedCharacter2.name : "Personaje 2"}
+        rowTitle={selectedCharacter2 ? selectedCharacter2.name : 'Personaje 2'}
         characters={charactersRow2}
         searchValue={search2}
         onSearchChange={onSearch2Change}

@@ -26,7 +26,7 @@ export const CharacterRow = ({
   selectedCharacter,
   onCharacterSelect,
 }: CharacterRowProps) => (
-  <div>
+  <div className="overflow-x-hidden">
     <SearchWithTitle
       title={rowTitle}
       searchValue={searchValue}
@@ -44,10 +44,12 @@ export const CharacterRow = ({
         />
       ))}
     </div>
-    <Pagination
-      currentPage={currentPage}
-      totalPages={totalPages}
-      onPageChange={onPageChange}
-    />
+    <div className="pb-[env(safe-area-inset-bottom)] sm:pb-4">
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={onPageChange}
+      />
+    </div>
   </div>
 );
