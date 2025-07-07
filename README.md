@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick & Morty Challenge
 
-## Getting Started
+Este proyecto es un desafío técnico que consume la API pública de [Rick and Morty](https://rickandmortyapi.com/) para mostrar personajes y episodios de la serie. El objetivo es practicar buenas prácticas de desarrollo, código limpio, UI/UX cuidada y testeo.
 
-First, run the development server:
+## 🚀 Tecnologías utilizadas
+
+- **Next.js** (v15)
+- **React** (v19)
+- **TypeScript**
+- **Tailwind CSS** (v4) para los estilos
+- **Jest + React Testing Library** para tests unitarios
+- **API pública de Rick and Morty**
+- **Vercel** (para deploy, opcional)
+
+---
+
+## 📌 Funcionalidades principales
+
+✅ Listado paginado de personajes en dos columnas:
+- **Character #1**
+- **Character #2**
+
+✅ Cada personaje se muestra en una card con:
+- Imagen
+- Nombre
+- Status
+- Especie
+
+✅ Búsqueda por nombre de personaje.
+
+✅ Modal con detalle del personaje (origen, género, ubicación, cantidad de episodios).
+
+✅ Al seleccionar un personaje en ambas columnas se habilita:
+- Listado de episodios de **Character #1**
+- Listado de episodios de **Character #2**
+- Listado de episodios compartidos
+
+✅ Diseño responsive (funciona en desktop y mobile).
+
+✅ Test unitarios de los principales componentes.
+
+---
+
+## 🧪 Tests
+
+Se realizaron tests unitarios sobre:
+- `CharacterCard` → Verifica render y click en la card.
+- `Pagination` → Verifica navegación entre páginas.
+- `EpisodesSection` → Verifica render de episodios.
+- `SearchWithTitle` → Verifica render y cambios en el input.
+
+Para correr los tests:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm run test
